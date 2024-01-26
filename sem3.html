@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1"content="width=device-height, initial-scale=1" /> 
+ 
+        <title>GOKUL SGPA CALCULATOR</title>
+        <script>
+
+    function calculate()
+        {
+
+        var a=parseInt(document.getElementById("MATHS").value);
+        var b=parseInt(document.getElementById("DSA").value);
+        var c=parseInt(document.getElementById("ADE").value);
+        var d=parseInt(document.getElementById("COA").value);
+
+        var f=parseInt(document.getElementById("Java L").value);
+        var g=parseInt(document.getElementById("Kan").value);
+        var h=parseInt(document.getElementById("SCR").value);
+        var i=parseInt(document.getElementById("C++").value);
+        
+       var aa=3*marks(a);
+       var ab=4*marks(b);
+       var ac=4*marks(c);
+       var ad=3*marks(d);
+       
+       var af=1*marks(f);
+       var ag=1*marks(g);
+       var ah=1*marks(h);
+       var ai=1*marks(i);
+       
+       
+
+        var z=((aa+ab+ac+ad+af+ag+ah+ai)/180)*10;
+
+       
+        document.getElementById("res").value=parseFloat(z);
+        }
+        
+        function marks(y)
+        {
+            if(y>=90)
+            return 10;
+            else if (y<=89&&y>=80)
+            return 9;
+            else if (y<=79&&y>=70)
+            return 8;
+            else if (y<=69&&y>=60)
+            return 7;
+            else if (y<=59&&y>=50)
+            return 6;
+            else if (y<=49&&y>=45)
+            return 5;
+            else if (y<=44&&y>=40)
+            return 4;
+            else
+            return 0;
+            
+        }
+
+
+
+        </script>
+
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            background-image:url('bg3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+            .container {
+            display:flex;
+            margin-right: 47%;
+            flex-direction:column;
+            align-items:flex-end;
+            text-align: center;
+            gap: 10px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: row;
+            align-items:flex-start;
+            text-align:end;
+            margin-bottom: 15px;
+        }
+
+        #calc {
+            background-color: rgb(255, 102, 0);
+            padding: 10px 15px;
+            border-color: black;
+            border-style: dashed;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #calc:hover{
+            background-color: rgba(113, 4, 4, 0.912);
+            color: rgb(0, 247, 255);
+        }
+            
+            label{
+                font-weight: bold;
+            padding-right: 20px;
+                color:ivory;
+                margin-top: 5%;
+                font-weight: bold;
+            }
+            input[type="text"] {
+            width: 70px;
+            height:30px;
+            padding-left: 10px;
+            text-align: center;
+        }
+           
+           
+        #res {
+            font-size: 16px;
+            width: 100px;
+            padding: 5px;
+            margin-top: 10px;
+            text-align: center;
+            background-color: blanchedalmond;
+
+        }
+           #h{
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: aqua;
+           }
+
+           @media (max-width: 600px) {
+        .container{ margin-right: 35%;}
+        }
+
+        </style>
+
+
+    </head>
+<center>
+    <body id="bd">
+
+        <div id="h"> SGPA CALCULATOR (3rd Sem) </div>
+    <div class="container">
+        <div class="input-group">
+            <label for="MATHS">MATHS:</label>
+            <input type="text" id="MATHS">
+        </div>
+
+        <div class="input-group">
+            <label for="DSA">DSA :</label>
+            <input type="text" id="DSA">
+        </div>
+
+        <div class="input-group">
+            <label for="ADE">ADE :</label>
+            <input type="text" id="ADE">
+        </div>
+
+        <div class="input-group">
+            <label for="COA">COA :</label>
+            <input type="text" id="COA">
+        </div>
+
+        <div class="input-group">
+            <label for="Java L">Java Lab:</label>
+            <input type="text" id="Java L">
+        </div>
+
+        <div class="input-group">
+            <label for="Kan">Kan :</label>
+            <input type="text" id="Kan">
+        </div>
+
+        <div class="input-group">
+            <label for="SCR">SCR :</label>
+            <input type="text" id="SCR">
+        </div>
+
+        <div class="input-group">
+            <label for="C++">C++ :</label>
+            <input type="text" id="C++">
+        </div>
+
+        <!-- Add other input fields in similar fashion -->
+    </div>
+    </br>
+
+    <input type="button" value="calculate" id="calc" onclick="calculate()"></input>
+
+    <p style="color:red; font-size:large">Your SGPA is : </p>
+    <input type="text" id="res" disabled, style="color:blue;font-size:24px;font-weight: bolder; padding: 5px;">
+
+</center>
+    </body>
+</html>

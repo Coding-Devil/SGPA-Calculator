@@ -1,2 +1,2 @@
 # SGPA-Calculator
-My personal SGPA Calculator [live(https://gokul-sgpa-calculator.vercel.app/)]
+My personal SGPA Calculator [click here] (https://gokul-sgpa-calculator.vercel.app/)
